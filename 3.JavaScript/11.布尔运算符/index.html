@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var flag=true;
+        console.log(!flag); //false
+
+        //以下6个为true
+        console.log(!null);
+        console.log(!undefined);
+        console.log(!0);
+        console.log(!"");
+        console.log(!NaN);
+        console.log(!false);
+
+        console.log(!100);
+        console.log(!"iwen");
+        console.log(!{name:"iwen"});
+
+        //且运算符（&&）
+        console.log(10<20&&10>5&&100>30); 
+
+        //或运算符（||）
+        console.log(10<20 || 10<5);
+
+    </script>
+</body>
+</html>
