@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var hello="helloworld!";
+        //判断上述字符串中是否存在e这个词汇
+        console.log(hello.indexOf("e"));
+
+        var gqlbb="天上明月光，疑是地上霜，能做我女朋友么，举头望明月，低头思故乡";
+        console.log(gqlbb.indexOf("能做我女朋友么"));
+
+         var str="thursday";
+         //判断有没有字符u
+         console.log(str.indexOf("u",5)); //从第5个位置开始查找，返回-1
+
+         if(gqlbb.indexOf("能做我女朋友么")>-1){
+            console.log("表白了");
+         }
+         else{
+            console.log("没表白");
+         }
+    </script>
+</body>
+</html>
