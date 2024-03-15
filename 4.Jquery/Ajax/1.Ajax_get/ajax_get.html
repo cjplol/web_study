@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$.ajax</title>
+</head>
+<body>
+    <button type="button" id="btn">查询数据</button>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+//点击按钮，发送ajax请求，将数据显示到页面中
+$("#btn").click(function(){
+    $.ajax({
+    type:"get", //请求方式
+    url: "data.txt",   //请求地址
+    data:{  //请求数据，json对象
+        "name":"cjp",
+        "age":15
+    },
+    dataType:"json", //预期返回的数据类型,在接收到返回值时会自动封装成json对象
+    success:function(data){ //请求成功时调用的函数，data是形参名，代表的是返回的数据
+        console.log(data);
+        //将字符串转换成json对象
+        // var obj=JSON.parse(data)
+        // console.log(obj);
+        //DOM操作
+        //创建ul
+        var ul=$("<ul></ul>");
+        //遍历返回的数据数组
+        for (var i=0;i<data.length;i++){
+            //得到数组中的每一个元素
+            var user=data[i];
+            //创建li元素
+            var li="<li>"+user.name+"</li>";
+            //将li元素设置到ul元素中
+            ul.append(li);
+        }
+        console.log(ul);
+        //将ul设置到body标签中
+        $("body").append(ul)
+    }
+});
+});
+
+
+</script>
+</html>

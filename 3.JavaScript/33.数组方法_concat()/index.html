@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr1=["尚学堂","百战程序员"];
+        var arr2=["sxt","itbaizhan"];
+        var arr3=["web前端","python","java"];
+
+        console.log(arr1+arr2); //合并成字符串
+        console.log(arr1.concat(arr2,arr3)); //['尚学堂', '百战程序员', 'sxt', 'itbaizhan']
+        console.log(arr1);  //原数组不变
+        console.log(arr2);  //原数组不变
+        console.log(arr3);  //原数组不变
+
+        var arr4=[10];
+        console.log(arr4.concat(20,30,40)); //[10, 20, 30, 40]
+    </script>
+</body>
+</html>

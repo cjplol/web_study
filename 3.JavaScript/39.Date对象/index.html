@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(Date.now());    //时间戳
+        console.log(new Date());
+
+        console.log(new Date().getDate());  //几号
+        console.log(new Date().getDay());   //星期几
+        console.log(new Date().getFullYear());  //年份
+        console.log(new Date().getMonth()+1);   //月份
+
+        //2030-1-1
+        var year=new Date().getFullYear();
+        var month=new Date().getMonth()+1;
+        var day=new Date().getDate();
+        console.log(year+"-"+month+"-"+day);
+
+        //编写函数获得本年度剩余天数（阳历）
+        function leftDays(){
+            var today=new Date();   //获取当前时间戳
+            var endYear=new Date(today.getFullYear(),11,31,23,59,59,999)    //获取本年最后一天的时间戳
+            var msPerDay= 24*60*60*1000;
+            var result=(endYear.getTime()-today.getTime())/msPerDay
+            result=Math.floor(result) //向下取整
+            return result
+        }
+        console.log(leftDays());
+    </script>
+</body>
+</html>
